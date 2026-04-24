@@ -1,0 +1,515 @@
+/* ============================================================
+   DARK MODE — SISTEMA COMPLETO
+   Baseado nas variáveis --sati- do projeto
+   Adicione body.dark-mode para ativar
+   ============================================================ */
+
+/* ── 1. VARIÁVEIS RAIZ ──────────────────────────────────────── */
+body.dark-mode {
+    /* Bootstrap overrides */
+    --bs-body-color: #dee2e6;
+    --bs-body-color-rgb: 222, 226, 230;
+    --bs-body-bg: #212529;
+    --bs-body-bg-rgb: 33, 37, 41;
+    --bs-emphasis-color: #fff;
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-secondary-color: rgba(222, 226, 230, 0.75);
+    --bs-secondary-color-rgb: 222, 226, 230;
+    --bs-secondary-bg: #343a40;
+    --bs-secondary-bg-rgb: 52, 58, 64;
+    --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+    --bs-tertiary-color-rgb: 222, 226, 230;
+    --bs-tertiary-bg: #2b3035;
+    --bs-tertiary-bg-rgb: 43, 48, 53;
+    --bs-heading-color: inherit;
+    --bs-link-color: #7197d2;
+    --bs-link-hover-color: #8dacdb;
+    --bs-link-color-rgb: 113, 151, 210;
+    --bs-link-hover-color-rgb: 141, 172, 219;
+    --bs-border-color: #2c3a47;
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.10);
+
+    /* ── Suas variáveis --sati- ── */
+    --sati-body-bg: #0b0b0b;
+    --sati-card-primary: #383737;
+    --sati-text-color-primary: #fafafa;
+    --sati-card-secondary: #0b1524;
+
+    /* Extras derivados para uso interno */
+    --sati-surface-1: #141b23;
+    /* cards, topbars, sidebars */
+    --sati-surface-2: #1a2332;
+    /* painéis secundários     */
+    --sati-surface-3: #0f141a;
+    /* fundo de página         */
+    --sati-border: #26313d;
+    /* bordas gerais           */
+    --sati-border-subtle: #1e2a35;
+    /* bordas internas/suaves  */
+    --sati-text-primary: #fff;
+    --sati-text-secondary: #fff;
+    --sati-text-secondary: #9aa4af;
+    --sati-text-muted: #5a6878;
+    --sati-link-color: #7197d2;
+    --sati-link-secondary: #fff;
+    --sati-accent: #2a6bff;
+    --sati-accent-hover: #1f57d6;
+    --sati-accent-subtle: rgba(42, 107, 255, 0.12);
+    --sati-accent-border: rgba(42, 107, 255, 0.30);
+}
+
+/* ── 2. BODY / BASE ─────────────────────────────────────────── */
+body.dark-mode {
+    background-color: var(--sati-surface-3);
+    color: var(--sati-text-primary);
+}
+
+/* ── 3. HEADER / TOPBAR ─────────────────────────────────────── */
+body.dark-mode .header-container,
+body.dark-mode .govbr-header,
+body.dark-mode .db-topbar {
+    background-color: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .db-acc-bar {
+    background: var(--sati-accent);
+}
+
+/* Logo separador */
+body.dark-mode .govbr-logo-sep,
+body.dark-mode .db-logo-sep {
+    background: var(--sati-border);
+}
+
+/* Texto de instituição */
+body.dark-mode .govbr-logo-inst,
+body.dark-mode .db-logo-inst {
+    color: var(--sati-text-secondary);
+}
+
+/* Links de navegação no topo */
+body.dark-mode .govbr-nav a,
+body.dark-mode .db-topnav a {
+    color: #9cc0ff;
+}
+
+body.dark-mode .govbr-nav a:hover,
+body.dark-mode .db-topnav a:hover {
+    color: #cfe0ff;
+    background-image: linear-gradient(rgba(156, 192, 255, 0.14), rgba(156, 192, 255, 0.14));
+}
+
+/* Botão login no header */
+body.dark-mode .govbr-btn-login {
+    background: var(--sati-accent);
+    color: #fff;
+}
+
+body.dark-mode .govbr-btn-login:hover {
+    background: var(--sati-accent-hover);
+}
+
+/* ── 4. NEWS / ACCESSIBILITY BAR ────────────────────────────── */
+body.dark-mode .news-container {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .accessibility-bar span,
+body.dark-mode .accessibility-bar a {
+    color: var(--sati-text-secondary);
+}
+
+body.dark-mode .accessibility-bar a:hover {
+    color: #9cc0ff;
+}
+
+/* ── 5. MAIN CONTENT / FUNDO ────────────────────────────────── */
+body.dark-mode .main-content {
+    background: var(--sati-surface-3);
+}
+
+/* ── 6. LOGIN CARD ──────────────────────────────────────────── */
+body.dark-mode .login-card {
+    background-color: var(--sati-surface-1);
+    border-color: var(--sati-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .login-header h1 {
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .login-header p {
+    color: var(--sati-text-secondary);
+}
+
+/* Formulário */
+body.dark-mode .form-group label {
+    color: var(--sati-text-secondary);
+}
+
+body.dark-mode .form-group input {
+    background: var(--sati-surface-3);
+    border-color: var(--sati-border);
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .form-group input::placeholder {
+    color: var(--sati-text-muted);
+}
+
+body.dark-mode .form-group input:focus {
+    border-color: var(--sati-accent);
+    box-shadow: 0 0 0 2px var(--sati-accent-subtle);
+}
+
+/* Botão entrar */
+body.dark-mode .btn-entrar {
+    background: var(--sati-accent);
+}
+
+body.dark-mode .btn-entrar:hover {
+    background: var(--sati-accent-hover);
+}
+
+/* Links do login */
+body.dark-mode .login-links a,
+body.dark-mode .login-secondary a {
+    color: #9cc0ff;
+}
+
+body.dark-mode .login-links a:hover,
+body.dark-mode .login-secondary a:hover {
+    color: #cfe0ff;
+}
+
+/* Divider / Footer */
+body.dark-mode .login-divider {
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .login-footer {
+    color: var(--sati-text-muted);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .login-footer a {
+    color: #9cc0ff;
+}
+
+/* Badge new */
+body.dark-mode .badge-new {
+    background: var(--sati-accent-subtle);
+    color: #9cc0ff;
+}
+
+/* ── 7. ICON USER ───────────────────────────────────────────── */
+body.dark-mode .icon-user {
+    background: rgba(42, 107, 255, 0.15);
+}
+
+body.dark-mode .icon-user svg {
+    fill: #9cc0ff;
+}
+
+/* ── 8. USER BUTTON ─────────────────────────────────────────── */
+body.dark-mode .user-button {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .user-button:hover {
+    background-image: linear-gradient(rgba(156, 192, 255, 0.10), rgba(156, 192, 255, 0.10));
+}
+
+body.dark-mode .user-button .avatar {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+body.dark-mode .user-button .avatar svg {
+    fill: var(--sati-text-primary);
+}
+
+body.dark-mode .user-button .label {
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .user-button .chevron {
+    color: var(--sati-text-secondary);
+}
+
+/* ── 9. DASHBOARD — WRAP / LAYOUT ───────────────────────────── */
+body.dark-mode .db-wrap {
+    background: var(--sati-body-bg);
+}
+
+body.dark-mode .db-layout {
+    background: var(--sati-surface-3);
+}
+
+/* ── 10. SIDEBAR ────────────────────────────────────────────── */
+body.dark-mode .db-sidebar {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+/* Usuário na sidebar */
+body.dark-mode .db-user {
+    border-color: var(--sati-border-subtle);
+}
+
+body.dark-mode .db-avatar {
+    background: var(--sati-accent-subtle);
+}
+
+body.dark-mode .db-avatar svg {
+    fill: #9cc0ff;
+}
+
+body.dark-mode .db-username {
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .db-usermat {
+    color: var(--sati-text-muted);
+}
+
+/* Seções de nav */
+body.dark-mode .db-nav-section {
+    color: var(--sati-text-muted);
+}
+
+body.dark-mode .db-nav-item {
+    color: var(--sati-text-secondary);
+}
+
+body.dark-mode .db-nav-item:hover:not(.active) {
+    background: var(--sati-surface-2);
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .db-nav-item.active {
+    color: #9cc0ff;
+    background: var(--sati-accent-subtle);
+    border-left-color: var(--sati-accent);
+}
+
+body.dark-mode .db-nav-arrow {
+    color: var(--sati-text-muted);
+}
+
+/* ── 11. DROPDOWN MENU (sidebar) ────────────────────────────── */
+body.dark-mode .db-menu ul {
+    background: linear-gradient(135deg, #141f2e, #0d1826);
+    border-color: var(--sati-accent-border);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .db-menu-item a {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--sati-text-secondary);
+    border-color: transparent;
+}
+
+body.dark-mode .db-menu-item a::before {
+    background: #4a7fc0;
+    box-shadow: 0 0 0 4px rgba(74, 127, 192, 0.2);
+}
+
+body.dark-mode .db-menu-item a:hover {
+    background: linear-gradient(90deg, rgba(42, 107, 255, 0.15), rgba(42, 107, 255, 0.05));
+    color: #9cc0ff;
+    border-color: var(--sati-accent-border);
+}
+
+/* ── 12. MAIN / BREADCRUMB / TÍTULOS ────────────────────────── */
+body.dark-mode .db-main {
+    background: var(--sati-surface-3);
+}
+
+body.dark-mode .db-breadcrumb {
+    color: var(--sati-text-muted) !important;
+}
+
+body.dark-mode .db-breadcrumb span {
+    color: #9cc0ff;
+}
+
+body.dark-mode .db-page-title {
+    color: var(--sati-text-primary);
+}
+
+/* ── 13. CARDS DE MÉTRICAS ──────────────────────────────────── */
+body.dark-mode .db-card {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .db-card-label {
+    color: var(--sati-text-muted);
+}
+
+body.dark-mode .db-card-value {
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .db-card-sub.up {
+    color: #4ade80;
+}
+
+body.dark-mode .db-card-sub.pend {
+    color: #fbbf24;
+}
+
+/* ── 14. PAINÉIS ────────────────────────────────────────────── */
+body.dark-mode .db-panel {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .db-panel-title {
+    color: var(--sati-text-primary);
+    border-color: var(--sati-border-subtle);
+}
+
+/* Lista dentro do painel */
+body.dark-mode .db-list-item {
+    border-color: var(--sati-border-subtle);
+    color: var(--sati-text-secondary);
+}
+
+/* ── 15. BADGES ─────────────────────────────────────────────── */
+body.dark-mode .db-badge.badge-blue,
+body.dark-mode .badge-blue {
+    background: rgba(42, 107, 255, 0.15);
+    color: #9cc0ff;
+}
+
+body.dark-mode .db-badge.badge-green,
+body.dark-mode .badge-green {
+    background: rgba(74, 222, 128, 0.12);
+    color: #4ade80;
+}
+
+body.dark-mode .db-badge.badge-amber,
+body.dark-mode .badge-amber {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+}
+
+/* ── 16. NOTICE / AVISO ─────────────────────────────────────── */
+body.dark-mode .db-notice {
+    background: rgba(42, 107, 255, 0.08);
+    border-color: var(--sati-accent-border);
+    color: #9cc0ff;
+}
+
+body.dark-mode .db-notice svg {
+    fill: #9cc0ff;
+}
+
+/* ── 17. PROGRESS BAR ───────────────────────────────────────── */
+body.dark-mode .progress-bar-wrap {
+    background: var(--sati-surface-2);
+}
+
+body.dark-mode .progress-bar-fill {
+    background: var(--sati-accent);
+}
+
+/* ── 18. QUICK LINKS ────────────────────────────────────────── */
+body.dark-mode .db-quick-link {
+    background: var(--sati-surface-2);
+    border-color: var(--sati-border);
+    color: #9cc0ff;
+}
+
+body.dark-mode .db-quick-link svg {
+    fill: #9cc0ff;
+}
+
+body.dark-mode .db-quick-link:hover {
+    background: var(--sati-accent-subtle);
+    border-color: var(--sati-accent-border);
+}
+
+body.dark-mode .footer {
+    background: var(--sati-surface-1) !important;
+    border-color: var(--sati-border) !important;
+    color: var(--sati-text-muted) !important;
+}
+
+body.dark-mode .footer a {
+    color: #9cc0ff !important;
+}
+
+/* ── 21. HOME HEADER ────────────────────────────────────────── */
+body.dark-mode .header-link {
+    color: var(--sati-text-primary);
+}
+
+/* ── 22. DADOS CADASTRAIS ───────────────────────────────────── */
+body.dark-mode .section-card {
+    background: var(--sati-surface-1);
+    border-color: var(--sati-border);
+}
+
+body.dark-mode .section-header {
+    background: var(--sati-card-primary);
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .section-header svg {
+    stroke: var(--sati-text-primary);
+}
+
+body.dark-mode .data-cell {
+    border-color: var(--sati-border-subtle);
+}
+
+body.dark-mode .data-label {
+    color: var(--sati-text-muted);
+}
+
+body.dark-mode .data-value {
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .data-value.empty {
+    color: var(--sati-text-muted);
+}
+
+/* ── 23. TABELA RESPONSIVA ──────────────────────────────────── */
+body.dark-mode .responsive-table th,
+body.dark-mode .responsive-table td {
+    border-color: var(--sati-border) !important;
+    color: var(--sati-text-secondary) !important;
+}
+
+body.dark-mode .responsive-table th {
+    background: var(--sati-card-primary);
+    color: var(--sati-text-primary);
+}
+
+body.dark-mode .responsive-table tbody tr:hover {
+    background-color: var(--sati-surface-2);
+}
+
+/* Mobile cards da tabela */
+@media (max-width: 768px) {
+    body.dark-mode .responsive-table tr {
+        border-color: var(--sati-border);
+        background: var(--sati-surface-1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    body.dark-mode .responsive-table td {
+        border-color: var(--sati-border-subtle);
+    }
+
+    body.dark-mode .responsive-table td::before {
+        color: var(--sati-text-secondary);
+    }
+}
